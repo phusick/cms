@@ -1,0 +1,27 @@
+[submodule "library/Zend"]
+	path = library/Zend
+	url = https://github.com/komola/ZendFramework.git
+[submodule "public/admin/src/dojo"]
+	path = public/admin/src/dojo
+	url = https://github.com/dojo/dojo.git
+[submodule "public/admin/src/dijit"]
+	path = public/admin/src/dijit
+	url = https://github.com/dojo/dijit.git
+[submodule "public/admin/src/util"]
+	path = public/admin/src/util
+	url = https://github.com/dojo/util.git
+[submodule "public/admin/src/dgrid"]
+	path = public/admin/src/dgrid
+	url = https://github.com/SitePen/dgrid.git
+[submodule "public/admin/src/xstyle"]
+	path = public/admin/src/xstyle
+	url = https://github.com/kriszyp/xstyle.git
+[submodule "public/admin/src/put-selector"]
+	path = public/admin/src/put-selector
+	url = https://github.com/kriszyp/put-selector.git
+[submodule "public/admin/src/dojox"]
+	path = public/admin/src/dojox
+	url = https://github.com/dojo/dojox.git
+[submodule "public/admin/src/dbind"]
+	path = public/admin/src/dbind
+	url = https://github.com/kriszyp/dbind.git

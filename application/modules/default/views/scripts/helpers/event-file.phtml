@@ -1,0 +1,9 @@
+<li>
+  <img src="/site/mime/<?php echo $this->icon?>-16.png">
+  <a href="<?php echo $this->url(array('uri' => $this->uri), 'file') ?>">
+    <?php echo $this->title ?>
+  </a>
+  <span>
+    <?php echo $this->formatFilesize($this->data['filesize'])?>
+  </span>
+</li>

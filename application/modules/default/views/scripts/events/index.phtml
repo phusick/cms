@@ -1,0 +1,28 @@
+<div class="events-content">
+  
+  <h2 class="invisible"><?php echo $this->translate('nav.events') ?></h2>
+  
+  <?php 
+    $actionName = Zend_Controller_Front::getInstance()->getRequest()->getActionName();
+  ?>
+  <ul class="event-folders">
+    <li <?php echo $actionName == 'index' ? 'class="active"' : ''?>>
+      <a href="<?php echo $this->url(array('action' => 'index'))?>" class="upcoming">
+        <?php echo $this->translate('event.upcoming') ?>
+      </a>
+    </li>
+    <li <?php echo $actionName == 'history' ? 'class="active"' : ''?>>
+      <a href="<?php echo $this->url(array('action' => 'history'))?>" class="history">
+        <?php echo $this->translate('event.history') ?>
+      </a>
+    </li>
+  </ul>
+  
+  <ul class="events">
+    <?php foreach($this->events as $event): ?>
+      <?php echo $this->eventWidget($event) ?>
+    <?php endforeach ?>
+  </ul>
+  
+  <div class="grid-clear"></div>
+</div>

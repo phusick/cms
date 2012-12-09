@@ -1,0 +1,6 @@
+<li <?php if($this->active === true) echo ' class="active"'?>>
+  <a href="<?php echo $this->url(array('uri' => $this->uri), 'folder')?>">
+    <?php echo $this->title ?>    
+  </a>
+  <span class="count"><?php echo $this->count?></span>
+</li>

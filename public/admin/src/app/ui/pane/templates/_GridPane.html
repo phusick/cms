@@ -1,0 +1,57 @@
+<div
+    data-dojo-type="dijit.layout.BorderContainer"
+    data-dojo-props="design: 'headline', gutters: false"
+    style="height:100%;"
+    >
+  
+  <div
+    data-dojo-type="dijit.Toolbar"
+    data-dojo-props="region: 'top'"
+    >
+    
+      <div
+        data-dojo-type="dijit.form.Button"
+        data-dojo-props="iconClass:'icon16 toolbarIconCreate'"
+        data-dojo-attach-point="createButton"
+      >
+        ${i18n.toolbar.create}
+      </div>
+      
+      <span data-dojo-type="dijit.ToolbarSeparator"></span>
+    
+      <div
+        data-dojo-type="dijit.form.Button"
+        data-dojo-props="iconClass:'icon16 toolbarIconUpdate', disabled:true"
+        data-dojo-attach-point="updateButton"
+      >
+        ${i18n.toolbar.update}
+      </div>
+  
+      <div
+        data-dojo-type="dijit.form.Button"
+        data-dojo-props="iconClass:'icon16 toolbarIconDelete', disabled:true"
+        data-dojo-attach-point="deleteButton"
+      >
+        ${i18n.toolbar.delete_}
+      </div>
+    
+      <span data-dojo-type="dijit.ToolbarSeparator"></span>
+      
+      <div
+        data-dojo-type="dijit.form.Button"
+        data-dojo-props="iconClass:'icon16 toolbarIconRefresh'"
+        data-dojo-attach-point="refreshButton"
+      >
+        ${i18n.toolbar.refresh}
+      </div>    
+
+  </div> 
+  
+  <div
+      data-dojo-type="dijit.layout.ContentPane"
+      data-dojo-props="region: 'center'"
+    >
+    <div data-dojo-attach-point="grid" class="gridPlaceholder"></div>
+  </div>
+  
+</div>

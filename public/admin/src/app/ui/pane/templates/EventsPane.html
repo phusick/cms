@@ -1,0 +1,138 @@
+<div
+    data-dojo-type="dijit.layout.BorderContainer"
+    data-dojo-props="design: 'sidebar', gutters: false"
+    data-dojo-attach-point="mainContainer"
+    style="height:100%;"
+>
+  
+  <!-- events pane -->
+  <div
+      data-dojo-type="dijit.layout.BorderContainer"
+      data-dojo-props="region: 'left', design: 'headline', gutters: false, splitter: true"
+      data-dojo-attach-point="eventPane"
+      style="width:520px;"
+  >
+    
+    <!-- toolbar: events -->
+    <div 
+        data-dojo-type="dijit.Toolbar"
+        data-dojo-props="region: 'top'"
+    >
+
+      <div
+        data-dojo-type="dijit.form.Button"
+        data-dojo-props="iconClass:'icon16 toolbarEventIconCreate'"
+        data-dojo-attach-point="createEventButton"
+      >
+        ${i18n.toolbar.create}
+      </div>
+
+      <span data-dojo-type="dijit.ToolbarSeparator"></span>
+      
+      <div
+        data-dojo-type="dijit.form.Button"
+        data-dojo-props="iconClass:'icon16 toolbarEventIconUpdate', disabled: true"
+        data-dojo-attach-point="updateEventButton"
+      >
+        ${i18n.toolbar.update}
+      </div>
+
+      <div
+        data-dojo-type="dijit.form.Button"
+        data-dojo-props="iconClass:'icon16 toolbarEventIconDelete', disabled: true"
+        data-dojo-attach-point="deleteEventButton"
+      >
+        ${i18n.toolbar.delete_}
+      </div>
+
+      <span data-dojo-type="dijit.ToolbarSeparator"></span>
+
+      <div
+        data-dojo-type="dijit.form.Button"
+        data-dojo-props="iconClass:'icon16 toolbarIconRefresh'"
+        data-dojo-attach-point="refreshEventButton"
+      >
+        ${i18n.toolbar.refresh}
+      </div>
+ 
+      
+    </div>
+    
+    <div
+      data-dojo-type="dijit.layout.ContentPane"
+      data-dojo-props="region: 'center'"
+    >
+      <div 
+          data-dojo-attach-point="eventGrid"
+          class="gridPlaceholder"
+      ></div>
+    </div>
+    
+  </div>
+  
+  <!-- files pane -->
+  <div
+    data-dojo-type="dijit.layout.BorderContainer"
+    data-dojo-props="region: 'center', design: 'headline', gutters: false"
+    data-dojo-attach-point="filePane"
+  >
+    
+    <!-- toolbar: files -->
+    <div 
+        data-dojo-type="dijit.Toolbar"
+        data-dojo-props="region: 'top'"
+    >
+      
+      <div
+        data-dojo-type="dijit.form.Button"
+        data-dojo-props="iconClass:'icon16 toolbarIconCreate', disabled: true"
+        data-dojo-attach-point="createFileButton"
+        data-dojo-attach-event="onClick:_onFileCreate"
+      >
+        ${i18n.toolbar.create}
+      </div>
+
+      <span data-dojo-type="dijit.ToolbarSeparator"></span>
+      
+      <div
+        data-dojo-type="dijit.form.Button"
+        data-dojo-props="iconClass:'icon16 toolbarIconUpdate', disabled: true, showLabel: false"
+        data-dojo-attach-point="updateFileButton"
+      >
+        ${i18n.toolbar.update}
+      </div>
+
+      <div
+        data-dojo-type="dijit.form.Button"
+        data-dojo-props="iconClass:'icon16 toolbarIconDelete', disabled: true, showLabel: false"
+        data-dojo-attach-point="deleteFileButton"
+      >
+        ${i18n.toolbar.delete_}
+      </div>
+
+      <span data-dojo-type="dijit.ToolbarSeparator"></span>
+
+      <div
+        data-dojo-type="dijit.form.Button"
+        data-dojo-props="iconClass:'icon16 toolbarIconRefresh', showLabel: false"
+        data-dojo-attach-point="refreshFileButton"
+      >
+        ${i18n.toolbar.refresh}
+      </div>
+
+      
+    </div>
+    <div
+      data-dojo-type="dijit.layout.ContentPane"
+      data-dojo-props="region: 'center'"
+    >
+      <div 
+          data-dojo-attach-point="fileGrid"
+          class="gridPlaceholder"
+      ></div>
+    </div>
+    
+  </div>
+  
+  
+</div>

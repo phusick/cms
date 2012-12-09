@@ -1,0 +1,17 @@
+<?php
+if(count($this->pagesInRange) > 1) {
+  echo '<div class="paginator-helper">';
+  echo '<span style="display:none;">' . $this->translate('paginator.pagination') . ': </span>';
+  foreach ($this->pagesInRange as $page) {
+    echo '<a class="page';
+    echo $this->current == $page ? ' active' : '';
+    echo '" href="'. $this->url(array('page' => $page)) .'" ';
+    echo 'title="' . $this->translate('paginator.page') . ' ' . $page . '"';
+    echo '>';
+    echo $page;
+    echo '</a>';
+    echo '<span style="display:none;">&nbsp;</span>';
+  }
+  echo '</div>';
+}
+?>

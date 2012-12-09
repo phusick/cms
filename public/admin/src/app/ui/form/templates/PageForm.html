@@ -1,0 +1,122 @@
+<table class="dialogForm">
+  
+  <tr>
+    <td>${i18n.form.title}</td>
+    <td>
+      <input data-dojo-type="dijit.form.ValidationTextBox"
+               data-dojo-props="
+                   name: 'title',
+                   required: true,
+                   maxLength: 140,
+                   trim: true,
+                   style: 'width:550px;'
+                   "
+      />
+    </td>
+  </tr>  
+  
+  <tr>
+    <td>${i18n.form.uri}</td>
+    <td>
+      <input data-dojo-type="dijit.form.ValidationTextBox"
+               data-dojo-props="
+                   name: 'uri',
+                   required: true,
+                   maxLength: 140,
+                   trim: true,
+                   style: 'width:550px;'
+                   "
+      />
+    </td>
+  </tr>
+  
+</table>
+
+<hr>
+
+<table class="pageDialogProps">
+  <tr>
+    <td>${i18n.form.language}</td>
+    <td style="padding-right:40px;"><input
+            data-dojo-attach-point="languageWidget"
+            data-dojo-type="app.widget.LocaleSelect"
+            data-dojo-props='name: "language"'
+        />
+    </td>
+    <td>&nbsp;</td>
+    <td>
+      <input
+          data-dojo-type="dijit.form.CheckBox" 
+          data-dojo-attach-point="publishWidget"
+          data-dojo-props='
+              name: "publish",
+              checked: true
+              '
+      >
+      <label>${i18n.form.publish}</label>
+    </td>    
+  </tr>
+  
+  <tr>
+    <td>${i18n.form.translation}</td>
+    <td>
+      <input 
+          data-dojo-type="dijit.form.FilteringSelect"
+          data-dojo-attach-point="translationWidget"
+          data-dojo-props="
+              name: 'translation',
+              searchAttr: 'title',
+              required: false
+              "
+          >
+    </td>
+
+    
+    <td>${i18n.form.startDate}</td>
+    <td>
+      <input
+          data-dojo-type="dijit.form.DateTextBox" 
+          data-dojo-attach-point="startDateWidget"   
+          data-dojo-props="
+              name: 'date_start',     
+              required: false,
+              openOnClick: false,
+              promptMessage: ''
+              "
+      /> 
+    </td>
+  </tr>
+  
+  <tr>
+    <td>${i18n.form.order}</td>
+    <td><input 
+            data-dojo-type="dijit.form.NumberSpinner"
+            data-dojo-attach-point="orderWidget"
+            data-dojo-props="
+                name: 'order',
+                smallDelta: 1,
+                largeDelta: 10,
+                constraints: {min:-10000, max:10000, places: 0}
+                "
+        />
+    </td>
+    
+    <td>${i18n.form.endDate}</td>
+    <td>
+      <input 
+          data-dojo-type="dijit.form.DateTextBox" 
+          data-dojo-attach-point="endDateWidget"   
+          data-dojo-props="
+              name: 'date_end',     
+              required: false,
+              openOnClick: false
+              "
+      /> 
+    </td>
+    
+  </tr>
+</table>
+
+<hr>
+
+<div data-dojo-attach-point="editorNode" style="width:600px;min-height:300px;background-color:#f7f7f7;"></div>

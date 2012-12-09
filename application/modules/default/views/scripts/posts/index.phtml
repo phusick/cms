@@ -1,0 +1,27 @@
+<div class="posts-content">
+
+  <?php foreach($this->paginator as $post): ?>
+  <section>
+    <div class="post">
+      <h3 class="datetime"><?php echo $this->formatDate($post['date_start'], $this->language) ?></h3>
+      <a class="title" href="<?php echo $this->url(array('uri' => $post['uri']), 'post')?>">
+        <h2 class="title"><?php echo $post['title'] ?></h2>
+      </a>
+      
+      <p class="description">
+      <?php 
+        $filter = new Zend_Filter_StripTags();
+        $content = $filter->filter($post['content']);
+        echo $this->truncate($content, 300);
+      ?>
+      </p>
+      
+    </div>
+  </section>
+  <?php endforeach; ?>
+
+  <div class="paginator">
+    <?php echo $this->paginationControl($this->paginator, 'Sliding', 'helpers/pagination.phtml');?>
+  </div>
+
+</div>

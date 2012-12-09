@@ -1,0 +1,56 @@
+<div class="sidebar-content">
+
+  <?php if(count($this->announcements)): ?>
+    <h2><?php echo $this->translate('title.news')?></h2>
+    <ul class="announcements">
+      <?php foreach($this->announcements as $announcement): ?>
+      <li>
+        <span class="announcement-date">
+          <?php echo $this->formatDate($announcement['date_start'], $this->lang) ?>
+        </span>
+        <span class="announcement-title">
+          <?php echo $announcement['content'] ?>
+        </span>
+      </li>
+      <?php endforeach ?>
+    </ul>
+  <?php endif ?>
+    
+  <?php if(count($this->pages)): ?>
+    <h2><?php echo $this->translate('title.pages')?></h2>
+    <ul class="pages">
+      <?php foreach($this->pages as $page): ?>
+      <li>
+        <a href="<?php echo $this->url(array('uri' => $page['uri']), 'page')?>">
+          <?php echo $page['title'] ?>
+        </a>
+      </li>
+      <?php endforeach ?>  
+    </ul>
+  <?php endif ?>
+    
+  <?php if(count($this->posts)): ?>
+    <h2><?php echo $this->translate('title.posts')?></h2>
+    <div class="posts">
+      <ul class="posts year">
+      <?php foreach($this->posts as $year => $months): ?>
+        <li><?php echo $year ?></li>
+        <ul class="posts month">
+        <?php foreach($months as $month => $posts): ?>
+          <li><?php echo $this->formatMonth($month, $this->lang) ?></li>
+          <ul class="posts post">
+            <?php foreach($posts as $post): ?>
+              <li>
+                <a href="<?php echo $this->url(array('uri' => $post['uri']), 'post') ?>">
+                  <?php echo $post['title']?>
+                </a>
+              </li>
+            <?php endforeach ?>
+          </ul>
+        <?php endforeach ?>
+        </ul>
+      <?php endforeach ?>
+      </ul>
+    </div>
+  <? endif ?>
+</div>

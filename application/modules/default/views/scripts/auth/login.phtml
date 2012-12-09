@@ -1,0 +1,12 @@
+<div class="auth-content">
+  <h2><?php echo $this->translate('auth.login')?></h2>
+  <?php if($this->isError) :?>
+    <div class="error"><?php echo $this->translate('auth.error')?></div>
+  <?php endif ?>
+  <?php echo $this->form ?>
+</div>
+<script type="text/javascript">
+  dojo.ready(function() {
+    dojo.byId("username").focus();
+  })
+</script>

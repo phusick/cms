@@ -1,0 +1,248 @@
+/**
+ * If you are developing a project that makes use of Dijit widgets, you will probably want to include the two files
+ * below; otherwise, you can remove them. When building for release, Dojo will automatically combine all of your
+ * @imported CSS files into a single file.
+ *
+ * It is highly, highly recommended that you develop your CSS using LESS: http://lesscss.org.
+ */
+
+@import '../../dojo/resources/dojo.css';
+@import '../../dijit/themes/claro/claro.css';
+
+@import '../../dgrid/css/dgrid.css';
+@import '../../dgrid/css/skins/claro.css';
+
+@import 'claro-fix.css';
+@import 'icons.css';
+
+@import '../widget/SidebarItem/SidebarItem.css';
+
+@import '../../dojox/form/resources/FileUploader.css';
+@import '../../dojox/editor/plugins/resources/css/LocalImage.css';
+
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
+hr {
+  height: 1px;
+  background-color: #D3D3D3;
+  border: none;
+}
+
+.sidebarPane {
+  width: 160px;
+  background-color: #d9dee5;
+}
+
+.sidebarPane .sidebarSection {
+  text-transform: uppercase;
+  color: #6d7e9b;
+  text-shadow: 1px 1px 1px white;
+  font-weight: bold;
+  font-size: 90%;
+  line-height: 20px;
+  padding-left: 12px;
+  vertical-align: bottom;
+  margin-top: 12px;
+  margin-bottom: 1px;
+}
+
+.pane {
+  color: #333333;
+  padding: 10px;
+}
+
+.pane .title,
+.pane-caption
+{
+  padding-left: 30px;
+  background-repeat: no-repeat;
+  background-color: transparent;
+  background-position: 0 0;
+  height: 24px;
+  line-height: 24px;
+  font-size: 18px;
+  color: #333333;
+  margin-left: 10px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.form table td {
+  padding: 3px;
+}
+
+.form .overlayBackground,
+.form .overlayProgress
+{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.form .overlayBackground {
+  background-color: #fff;
+  opacity: .8;  
+  z-index: 100;
+  display: none;
+}
+
+.form .overlayProgress {
+  background-color: transparent;
+  z-index: 101;
+  display: none;
+}
+
+.form .overlayProgress.indeterminate {
+  background: transparent url(images/loadingAnimation.gif) center center no-repeat;
+}
+
+.gridPlaceholder {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: auto;
+}
+
+.dgrid .dgrid-no-data {
+  text-align: center;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.dgrid .field-id {
+  width: 50px;
+  text-align: right;
+}
+
+.dgrid .column-date,
+.dgrid-column-date {
+  width: 100px;
+  text-align: right;
+  padding-right: .6em;
+}
+
+.dgrid .column-datetime {
+  width: 100px;
+  text-align: right;
+  padding-right: .4em;
+  font-size: 85%;
+}
+
+.dgrid th.column-datetime {
+  width: 100px;
+  text-align: right;
+  padding-right: .6em;
+  font-size: 100%;
+}
+
+.dgrid .field-language {
+  width: 23px;
+  vertical-align: middle;
+}
+
+.dgrid .field-publish,
+.dgrid .field-active
+{
+  width: 23px;
+  vertical-align: middle;
+}
+
+.dgrid-column-filesize {
+  width: 60px;
+  text-align: right;
+}
+
+.dgrid .field-count {
+  width: 30px;
+  text-align: right;
+}
+
+.dgrid .field-order {
+  width: 60px;
+  text-align: right;
+}
+
+.dgrid-column-icon {
+  width: 23px;
+  text-align: center;
+  vertical-align: bottom;
+  padding: 0;
+}
+
+.dgrid .field-role {
+  width: 100px;
+}
+
+.dgrid img.icon16 {
+  width: 16px;
+  height: 16px;
+}
+
+.widgetLocaleSelect.flag-cs,
+.widgetLocaleSelect.flag-en
+{
+  padding-left: 22px;
+  background-repeat: no-repeat;
+  background-position: 2px 1px;
+}
+
+.widgetLocaleSelect.flag-cs {
+  background-image: url(icons/locale-cs.png);
+}
+
+.widgetLocaleSelect.flag-en {
+  background-image: url(icons/locale-en.png);
+}
+
+table.pageDialogProps {
+  width: 100%;
+  background-color: #eeeeee;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  padding-left: 3px;
+}
+
+.aboutDialog .logo {
+  width: 60px;
+  height: 24px;
+  background: transparent url(images/cms-logo.png) center center no-repeat;  
+}
+
+.aboutDialog .photo {
+  width: 80px;
+  height: 80px;
+  padding: 5px;
+  box-shadow: rgba(0, 0, 0, 0.296875) 0px 0px 4px 0px;
+  background: transparent url(images/martin.jpg) center center no-repeat;
+}
+
+.aboutDialog .photo24 {
+  width: 24px;
+  height: 24px;
+  background: transparent url(images/martin24.jpg) center center no-repeat;
+}
+
+.aboutDialog a.mailto:hover {
+  text-decoration: none;
+}
+
+.aboutDialog td.info {
+  padding-left: 24px;
+}
+
+.aboutDialog a.attribution {
+  text-decoration: none;
+  color: #6d7e9b;
+}
+
+.aboutDialog a.attribution:hover {
+  text-decoration: underline;
+}

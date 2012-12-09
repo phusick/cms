@@ -1,0 +1,119 @@
+<div style="height:100%;">
+  <div
+      data-dojo-type="dijit/layout/BorderContainer"
+      data-dojo-props="design: 'sidebar', gutters: false"
+      data-dojo-attach-point="mainContainer"
+      style="height:100%;"
+    >
+    
+    <div
+      data-dojo-type="dijit/layout/BorderContainer"
+      data-dojo-props="region: 'left', splitter: true, design: 'headline', gutters: false"
+      data-dojo-attach-point="sidebarPane"
+      class="sidebarPane"
+    >
+      
+      <div 
+          data-dojo-type="dijit/layout/ContentPane"
+          data-dojo-props="region: 'center'"
+      >
+      
+        <div class="sidebarSection">${i18n.title.public_}</div>
+        <div
+            id="sidebar-posts"
+            data-dojo-type="app/widget/SidebarItem"
+            data-dojo-props="iconClass: 'sidebarIconPosts', value:'posts', name: 'sidebar'">
+          ${i18n.title.posts}
+        </div>
+        <div
+            id="sidebar-pages"
+            data-dojo-type="app/widget/SidebarItem"
+            data-dojo-props="iconClass: 'sidebarIconPages', value:'pages', name: 'sidebar'">
+          ${i18n.title.pages}
+        </div> 
+        <div
+            id="sidebar-news"
+            data-dojo-type="app/widget/SidebarItem"
+            data-dojo-props="iconClass: 'sidebarIconNews', value:'news', name: 'sidebar'">
+          ${i18n.title.news}
+        </div> 
+        <div
+            id="sidebar-members"
+            data-dojo-type="app/widget/SidebarItem"
+            data-dojo-props="iconClass: 'sidebarIconMembers', value:'members', name: 'sidebar'">
+          ${i18n.title.members}
+        </div> 
+
+        <div class="sidebarSection">${i18n.title.private_}</div>
+        <div
+            id="sidebar-docs"
+            data-dojo-type="app/widget/SidebarItem"
+            data-dojo-props="iconClass: 'sidebarIconDocs', value:'docs', name: 'sidebar'">
+          ${i18n.title.docs}
+        </div> 
+        <div
+            id="sidebar-events"
+            data-dojo-type="app/widget/SidebarItem"
+            data-dojo-props="iconClass: 'sidebarIconEvents', value:'events', name: 'sidebar'">
+          ${i18n.title.events}
+        </div> 
+
+        <div class="sidebarSection">${i18n.title.administration}</div>
+        <div
+            id="sidebar-users"
+            data-dojo-type="app/widget/SidebarItem"
+            data-dojo-props="iconClass: 'sidebarIconUsers', value:'users', name: 'sidebar'">
+          ${i18n.title.users}
+        </div> 
+        <!--div
+            id="sidebar-settings"
+            data-dojo-type="app.widget.SidebarItem"
+            data-dojo-props="iconClass: 'sidebarIconSettings', value:'settings', name: 'sidebar'">
+          ${i18n.title.settings}
+        </div--> 
+        <!--div
+            id="sidebar-logs"
+            data-dojo-type="app.widget.SidebarItem"
+            data-dojo-props="iconClass: 'sidebarIconLogs', value:'logs', name: 'sidebar'">
+          ${i18n.title.logs}
+        </div--> 
+      </div>
+      
+      <!-- here -->
+      <div 
+          data-dojo-type="dijit/Toolbar"
+          data-dojo-props="region: 'bottom'"
+      >
+        <div
+          data-dojo-type="dijit/form/DropDownButton"
+          data-dojo-props="iconClass:'icon16 menuIconGear', showLabel: false"
+        >
+          <span>${i18n.menu.gear}</span>
+          <div 
+              data-dojo-type="dijit/Menu"
+              data-dojo-attach-point="gearMenuWidget"
+              style="display: none;">
+          </div> 
+          
+        </div>
+        
+        <div
+          data-dojo-type="dijit/form/Button"
+          data-dojo-props="iconClass:'icon16 menuIconLogout'"
+          data-dojo-attach-point="logoutButton"
+        >${i18n.menu.logout}
+        </div>
+      </div>
+    </div>
+    
+    <div
+      data-dojo-type="dijit/layout/StackContainer"
+      data-dojo-props="region: 'center'"
+      data-dojo-attach-point="stackContainer"
+      style="background-color:#eeeeee;"
+    >
+      
+    </div>   
+
+  </div>
+</div>
