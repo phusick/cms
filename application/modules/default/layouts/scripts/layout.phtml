@@ -1,0 +1,107 @@
+<?php echo $this->doctype() ?>
+<html>
+  <head>
+    <?php echo $this->headMeta() ?>
+    <?php echo $this->headTitle() ?>
+    <?php echo $this->headLink() ?>
+    <?php echo $this->headScript() ?>
+  </head>
+  <body class="<?php echo $this->placeholder('bodyCssClass')?>">
+    
+    <div class="layout-container">
+      
+<!-- HEADER -->
+      <header>
+        <hgroup>
+          <div class="header">
+            <h1 class="logo">CMS</h1>
+            <div class="auth-box">
+              <?php
+                // language box
+                $lang = Zend_Controller_Action_HelperBroker::getExistingHelper('language')->direct();
+                $lang = $lang == 'cs' ? 'en' : 'cs';
+                
+                echo '<a href="/' . $lang . '" ';
+                echo 'class="lang '. $lang .'"';
+                echo 'title="' . $this->translate('lang.' . $lang) . '"';
+                echo '>';
+                echo $this->translate("lang.$lang.version");
+                echo '</a>';
+                echo '<span> | </span>';
+                
+                // auth box
+                $authAction = 'login';
+                if(Zend_Auth::getInstance()->hasIdentity()) {
+                  $authAction = 'logout';
+                  echo '<span><strong>';
+                  echo Zend_Auth::getInstance()->getStorage()->read()->username;
+                  echo '</strong>';
+                  echo ' | ';
+                  echo '</span>';
+                }
+              ?>
+              <a href="<?php echo $this->url(array(
+                      'module'     => 'default',
+                      'controller' => 'auth',
+                      'action'     => $authAction
+                  ),
+                      'default'
+                      
+                      )?>">
+                <?php echo $this->translate("auth.$authAction")?>
+              </a>
+              
+            </div>
+          </div>
+        </hgroup>
+      </header>
+      
+      <div class="main-container">
+        <div class="main-border top"></div>
+        <div class="main-border bottom"></div>
+        
+        <div class="grid-container">
+          
+<!-- NAVIGATION -->
+          <div class="grid-column navigation">
+            <nav>
+              <?php echo $this->navigation() ?>
+            </nav>
+          </div>
+
+<!-- CONTENT -->
+          <?php $animation = is_null($this->animation) ? '' : $this->animation . ' animated'?>
+          <?php if($this->animationDelay) $animation .= ' delayed'?>
+          <div id="content" class="grid-column content <?php echo $animation?>">
+            <?php echo $this->layout()->content ?>
+          </div>
+
+<!-- SIDE BAR -->
+          <div class="grid-column sidebar">
+            <?php echo $this->layout()->sidebar ?>
+          </div>
+       
+
+          
+        </div>
+
+        <div class="grid-clear">&nbsp;</div>
+
+      </div>
+
+<!-- FOOTER -->
+      <footer>
+        <div class="footer">
+          <p>
+            <?php echo $this->translate('footer.title') ?>
+          </p>
+          <p>
+            <?php echo $this->translate('footer.copyright') ?>
+          </p>
+        </div>
+      </footer>
+    </div>
+    
+  </body>
+</html>
+

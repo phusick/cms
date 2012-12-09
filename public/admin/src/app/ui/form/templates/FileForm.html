@@ -1,0 +1,54 @@
+<table class="dialogForm">
+  
+  <tr>
+    <td>${i18n.form.title}</td>
+    <td>
+      <input data-dojo-type="dijit.form.ValidationTextBox"
+               data-dojo-props='
+                   name: "title",
+                   required: true,
+                   maxLength: 140,
+                   trim: true,
+                   style: "width: 30em;"
+                   '
+               data-dojo-attach-point="titleDijit" 
+      />
+    </td>
+  </tr>
+  
+  
+  <tr>
+    <td>${i18n.form.file}</td>
+    <td>
+      <input
+        data-dojo-type="dojox.form.Uploader"
+        data-dojo-props="
+            label:'Select File',
+            multiple: false,
+            type:'file',
+            name: 'uploadedfile',
+            url: '/rest/file',
+            uploadOnSelect: false
+            "
+        data-dojo-attach-point="uploader"
+      >
+      <span data-dojo-attach-point="filenameNode"></span>
+    </td>
+  </tr>
+  
+  
+  <tr>
+    <td>&nbsp;</td>
+    <td>
+      <input
+          data-dojo-type="dijit.form.CheckBox" 
+          data-dojo-props='
+              name: "publish",
+              checked: true
+              '
+      />
+      <label>${i18n.form.publish}</label>
+    </td>
+  </tr>
+  
+</table>

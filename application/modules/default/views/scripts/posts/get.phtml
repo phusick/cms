@@ -1,0 +1,21 @@
+<div class="post-content">
+  <?php $post = $this->post ?>
+
+  <article>
+  
+    <hgroup>
+      <h2 class="title"><?php echo $post['title'] ?></h2>
+      <h3 class="datetime">
+        <time datetime="<?php echo $post['date_start']?>" pubdate="pubdate">
+          <?php echo $this->formatDate($post['date_start'], $this->language) ?>
+        </time>
+      </h3>
+    </hgroup>
+  
+    <section>
+      <?php echo $post['content'] ?>
+    </section>
+  
+  </article>
+</div>
+

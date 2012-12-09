@@ -1,0 +1,8 @@
+Setenv APPLICATION_ENV development
+
+RewriteEngine On
+
+RewriteRule !\.(js|gif|jpg|png|css|txt|html)$ public/index.php [L]
+
+RewriteCond %{REQUEST_URI} !^/public/
+RewriteRule ^(.*)$ public/$1 [L]

@@ -1,0 +1,57 @@
+<table class="dialogForm">
+
+  <tr>
+    <td><label>${i18n.form.description}</label></td>
+    <td><input data-dojo-type="app.widget.ValidationTextarea"
+               data-dojo-props='
+                   name: "content",
+                   required: true,
+                   maxLength: 140,
+                   cols: 40,
+                   rows: 5
+                   '
+               data-dojo-attach-point="_contentDijit" 
+        />
+    </td>
+  </tr>
+  
+  <tr>
+    <td><label>${i18n.form.date}</label></td>
+    <td><input data-dojo-type="dijit.form.DateTextBox" 
+               data-dojo-props='
+                  name: "date_start",     
+                  required: true,
+                  openOnClick: false,
+                  value: new Date()
+                  '
+               data-dojo-attach-point="_dateStartDijit"
+        />
+    </td>
+  </tr>
+  
+  <tr>
+    <td>${i18n.form.language}</td>
+    <td><input 
+            data-dojo-type="app.widget.LocaleSelect"
+            data-dojo-props='name: "language"'
+        />
+    </td>
+  </tr>
+    
+  
+  <tr>
+    <td>&nbsp;</td>
+    <td>
+      <input
+          data-dojo-type="dijit.form.CheckBox" 
+          data-dojo-props='
+              name: "publish",
+              checked: true
+              '
+      />
+      <label>${i18n.form.publish}</label>
+    </td>
+  </tr>
+
+  
+</table>

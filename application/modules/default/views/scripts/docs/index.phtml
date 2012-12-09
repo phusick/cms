@@ -1,0 +1,32 @@
+<div class="docs-content">
+  
+  <h2 class="invisible"><?php echo $this->translate('title.folders') ?></h2>
+  
+  <ul class="folders">
+    <li <?php if(is_null($this->uri)) echo 'class="active"' ?>>
+      <a href="<?php echo $this->url(array('uri' => null), 'folder')?>" class="latest">
+        <?php echo $this->translate('folder.latest') ?>
+      </a>
+    </li>
+    <?php echo $this->partialLoop('helpers/folder.phtml', $this->folders) ?>
+  </ul>
+  
+  <ul class="files" id="files">
+    <?php foreach($this->files as $file): ?>
+      <?php if(is_null($this->uri)): ?>
+        <div class="divider">
+          <span class="divider-line"></span>
+          <span class="divider-date"><?php echo $this->formatDate($file['date_created'], $this->language) ?></span>
+          &nbsp;@&nbsp;
+          <span class="divider-folder"><?php echo $file['folder_title'] ?></span>
+          <span class="divider-line" style="padding-left:320px;"></span>
+        </div>
+      <?php endif ?>
+    
+      <?php echo $this->fileWidget($file) ?>
+    <?php endforeach ?>
+  </ul>
+  
+  <div class="grid-clear"></div>
+  
+</div>

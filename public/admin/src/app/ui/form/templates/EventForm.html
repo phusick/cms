@@ -1,0 +1,131 @@
+<table class="dialogForm">
+  
+  <tr>
+    <td>${i18n.form.title}</td>
+    <td>
+      <input data-dojo-type="dijit.form.ValidationTextBox"
+               data-dojo-props='
+                   name: "title",
+                   required: true,
+                   maxLength: 40,
+                   trim: true,
+                   style: "width: 29em;"
+                   '
+      />
+    </td>
+  </tr>
+  
+  <tr>
+    <td>${i18n.form.date}</td>
+    <td>
+      <input
+          data-dojo-type="dijit.form.DateTextBox"
+          data-dojo-props='
+              name: "start_date",
+              required: true,
+              openOnClick: false,
+              value: new Date(),
+              style: "width:7em;"
+              '
+          data-dojo-attach-point="startDateWidget"
+      >
+      <input 
+          data-dojo-type="dijit.form.TimeTextBox"
+          data-dojo-props='
+              name: "start_time",
+              required: true,
+              openOnClick: false,
+              value: "T09:00:00",
+              style: "width:6em;"
+              '
+          data-dojo-attach-point="startTimeWidget"
+      >
+      
+      <span style="padding: 0 4px;">${i18n.form.to}</span>
+      
+      <input 
+          data-dojo-type="dijit.form.TimeTextBox"
+          data-dojo-props='
+              name: "end_time",
+              required: true,
+              openOnClick: false,
+              value: "T15:00:00",
+              style: "width:6em;"
+              '
+          data-dojo-attach-point="endTimeWidget"
+      >
+      <input
+          data-dojo-type="dijit.form.DateTextBox"
+          data-dojo-props='
+              name: "end_date",
+              required: true,
+              openOnClick: false,
+              value: new Date(),
+              style: "width: 7em;"
+              '
+          data-dojo-attach-point="endDateWidget"
+      >
+    </td>
+  </tr>
+  
+  <tr>
+    <td>&nbsp;</td>
+    <td>
+      <input
+          data-dojo-type="dijit.form.CheckBox" 
+          data-dojo-props='
+              name: "all_day",
+              checked: false
+              '
+          data-dojo-attach-point="allDayWidget"
+      />
+      <label>${i18n.form.allDay}</label>
+    </td>
+  </tr>
+  
+  <tr>
+    <td>${i18n.form.place}</td>
+    <td>
+      <input 
+          data-dojo-type="dijit.form.TextBox"
+          data-dojo-props='
+              name: "place",
+              required: true,
+              maxLength: 40,
+              trim: true,
+              style: "width: 29em;"
+              '
+           data-dojo-attach-point="placeWidget"        
+      />
+    </td>
+  </tr>
+  
+  <tr>
+    <td>${i18n.form.description}</td>
+    <td>
+      <input data-dojo-type="dijit.form.Textarea"
+               data-dojo-props='
+                   name: "content",
+                   maxLength: 1000,
+                   trim: true,
+                   cols: 43
+                   '
+      />
+    </td>
+  </tr>
+  
+  <tr>
+    <td>&nbsp;</td>
+    <td>
+      <input
+          data-dojo-type="dijit.form.CheckBox" 
+          data-dojo-props='
+              name: "publish",
+              checked: true
+              '
+      />
+      <label>${i18n.form.publish}</label>
+    </td>
+  </tr>
+  
+</table>  

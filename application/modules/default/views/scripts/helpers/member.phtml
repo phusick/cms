@@ -1,0 +1,45 @@
+<div class="member-container">
+  
+  <div class="member-header"></div>
+  <div class="member-body">
+    <div class="vcard">
+      <div class="member-content">
+        <div class="info-basic">
+          <div class="photo">
+            <img src="/site/themes/default/images/member-photo.jpg">           
+          </div>
+          <div class="text">
+            <p class="fn">
+              <span class="given-name">
+                <?php echo $this->{'given-name'} ?>
+              </span>
+              <span class="family-name">
+                <?php echo $this->{'family-name'} ?>
+              </span>
+            </p>
+            <p class="title">
+              <?php echo $this->title ?>
+            </p>
+            
+          </div>
+        </div>
+
+
+        <div class="info-detail">
+          <?php if (isset($this->tel)) : ?>
+            <div class="tel">
+              <span class="type">Tel:</span> <?php echo $this->tel ?>
+            </div>
+          <?php endif ?>
+          <?php if (isset($this->email)) : ?>
+            <div>Email: 
+              <span class="email"><?php echo $this->email ?></span>
+            </div>
+          <?php endif ?>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="member-footer"></div>
+  
+</div>

@@ -1,0 +1,28 @@
+.claro .dijitContentPane {
+  padding: 0;
+}
+
+.claro .dijitSplitter {
+  background-color: #b4b4b4;
+  width: 2px;
+}
+
+.claro .dgrid {
+  border: none;
+  border-top: 1px solid #bbbbbb;
+}
+
+.claro .dgrid .dgrid-scroller {
+  background-color: #eeeeee;
+}
+
+.claro .dgrid .dgrid-row {
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  -o-user-select: none;
+  user-select: none;
+  cursor: default;
+   
+}

@@ -1,0 +1,96 @@
+<li class="event-widget">
+  <div class="border-top"></div>
+  <div class="vevent container">
+    <div class="calendar">
+      <div class="calendar-overlay"></div>
+      <span class="date"><?php echo $this->calendarDay ?></span>
+      <span class="month"><?php echo $this->calendarMonth ?></span>
+    </div>
+    
+    <!-- microformats: start -->
+    <abbr class="dtstart" title="<?php echo $this->veventStart?>" style="display:none;"></abbr>
+    <abbr class="dtend" title="<?php echo $this->veventEnd?>" style="display:none;"></abbr>
+    <!-- microformats: end -->
+    
+    <div class="content">
+      
+      <div class="title summary">
+          <?php echo $this->title?>
+      </div>
+      
+      <div class="duration">
+        
+        <?php if ($this->isAllDay): ?>
+          <!-- ALL DAY -->
+          <div class="date-start">
+            <?php echo $this->startDate?>
+          </div>
+          <?php if ($this->endDate && !$this->isTheSameDay): ?>
+            <div class="date-end">
+              <?php echo $this->endDate ?>
+            </div>
+          <?php endif ?>
+        <?php else: ?>
+          <!-- NOT ALL DAY -->
+          <?php if (!$this->endDate): ?>
+            <div class="date-start">
+              <?php echo $this->startDate?>
+            </div>
+            <div class="time">
+              <?php echo $this->startTime?>
+            </div>
+          <?php else: ?>
+            <?php if ($this->isTheSameDay): ?>
+              <div class="date-start">
+                <?php echo $this->startDate?>
+              </div>
+              <div class="time">
+                <?php echo $this->startTime?>
+                <?php echo ' - ' ?>
+                <?php echo $this->endTime?>
+              </div>
+            <?php else: ?>
+              <div class="date-start">
+                <?php echo $this->startDate?>
+                <?php echo $this->separator ?>
+                <?php echo $this->startTime?>
+              </div>
+              <div class="date-end">
+                <?php echo $this->endDate?>
+                <?php echo $this->separator ?>
+                <?php echo $this->endTime?>
+              </div>
+
+            <?php endif ?>
+          <?php endif ?>
+        <?php endif ?>
+          
+      </div>
+      <?php if ($this->location): ?>  
+        <div class="location" title="<?php echo $this->location?>"><?php echo $this->location?></div>
+      <?php endif  ?>
+      <?php if ($this->fileCount > 0): ?>
+        <div class="file-count"><?php echo $this->fileCount?></div>
+      <?php endif ?>
+      
+      <div class="line"></div>
+      
+      <div class="details">
+        <?php if($this->description): ?>
+          <div class="description">
+            <?php echo $this->description ?>
+          </div>
+        <?php endif ?>
+        <?php if($this->fileCount): ?>
+          <ul class="event-files">
+            <?php echo $this->partialLoop('helpers/event-file.phtml', $this->files)?>
+          </ul>
+        <?php endif ?>
+        
+      </div>
+      
+      <div class="expando" style="display:none;"></div>
+    </div>
+  </div>
+  <div class="border-bottom"></div>
+</li>
