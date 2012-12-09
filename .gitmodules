@@ -19,3 +19,9 @@
 [submodule "public/admin/src/put-selector"]
 	path = public/admin/src/put-selector
 	url = https://github.com/kriszyp/put-selector.git
+[submodule "public/admin/src/dojox"]
+	path = public/admin/src/dojox
+	url = https://github.com/dojo/dojox.git
+[submodule "public/admin/src/dbind"]
+	path = public/admin/src/dbind
+	url = https://github.com/kriszyp/dbind.git

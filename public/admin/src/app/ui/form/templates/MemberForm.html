@@ -1,0 +1,108 @@
+<table class="dialogForm">
+  
+  <tr>
+    <td>${i18n.form.givenName}</td>
+    <td>
+      <input data-dojo-type="dijit.form.ValidationTextBox"
+               data-dojo-props='
+                   name: "given-name",
+                   required: true,
+                   maxLength: 140,
+                   trim: true,
+                   style: "width: 30em;"
+                   '
+      />
+    </td>
+  </tr>
+  
+  <tr>
+    <td>${i18n.form.familyName}</td>
+    <td>
+      <input data-dojo-type="dijit.form.ValidationTextBox"
+               data-dojo-props='
+                   name: "family-name",
+                   required: true,
+                   maxLength: 140,
+                   trim: true,
+                   style: "width: 30em;"
+                   '
+      />
+    </td>
+  </tr>
+
+  <tr>
+    <td>${i18n.form.role}</td>
+    <td>
+      <input data-dojo-type="dijit.form.ValidationTextBox"
+               data-dojo-props='
+                   name: "title",
+                   required: true,
+                   maxLength: 140,
+                   trim: true,
+                   style: "width: 30em;"
+                   '
+      />
+    </td>
+  </tr>
+  
+  <tr>
+    <td>${i18n.form.telephone}</td>
+    <td>
+      <input data-dojo-type="dijit.form.ValidationTextBox"
+               data-dojo-props='
+                   name: "tel",
+                   required: true,
+                   maxLength: 140,
+                   trim: true,
+                   style: "width: 30em;"
+                   '
+      />
+    </td>
+  </tr>
+  
+  <tr>
+    <td>${i18n.form.email}</td>
+    <td>
+      <input data-dojo-type="dijit.form.ValidationTextBox"
+               data-dojo-props='
+                   name: "email",
+                   required: true,
+                   maxLength: 140,
+                   trim: true,
+                   style: "width: 30em;"
+                   '
+      />
+    </td>
+  </tr>
+  
+  <tr>
+    <td>${i18n.form.order}</td>
+    <td><input 
+            data-dojo-type="dijit.form.NumberSpinner"
+            data-dojo-attach-point="orderWidget"
+            data-dojo-props="
+                name: 'order',
+                smallDelta: 1,
+                largeDelta: 10,
+                constraints: {min:-10000, max:10000, places: 0},
+                value: 0
+                "
+        />
+    </td>
+  </tr>
+  
+  <tr>
+    <td>&nbsp;</td>
+    <td>
+      <input
+          data-dojo-type="dijit.form.CheckBox" 
+          data-dojo-props='
+              name: "publish",
+              checked: true
+              '
+      />
+      <label>${i18n.form.publish}</label>
+    </td>
+  </tr>  
+  
+</table>

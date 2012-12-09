@@ -1,0 +1,49 @@
+@import url('http://fonts.googleapis.com/css?family=Open+Sans:400,300,600&subset=latin,latin-ext');
+
+body {
+  padding: 5px;
+  color: #333333 !important;
+  font: 13px/22px 'Open Sans',sans-sefif;
+}
+
+h1 {
+  color: #d14836;
+  font-size: 23px;
+  font-weight: 300;
+}
+
+h1, h2, h3 {
+  color: #36c;
+  font-weight: 300;
+}
+
+h1 {
+  font-size: 23px;
+}
+
+h2 {
+  font-size: 20px;
+}
+
+h3 {
+  font-size: 18px;
+}
+
+p {
+  color: #333333;
+  font-weight: 400;
+  margin-bottom: 16px;
+}
+
+img {
+  border: none;
+}
+
+a {
+  color: #36c;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}

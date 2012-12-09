@@ -1,0 +1,101 @@
+<table class="dialogForm">
+  
+  <tr>
+    <td>${i18n.form.username}</td>
+    <td>
+      <input data-dojo-type="dijit.form.ValidationTextBox"
+               data-dojo-props='
+                   name: "username",
+                   required: true,
+                   maxLength: 64,
+                   trim: true,
+                   style: "width: 30em;"
+                   '
+      />
+    </td>
+  </tr>
+  
+  <tr>
+    <td>${i18n.form.role}</td>
+    <td>
+      <select data-dojo-type="dijit.form.Select"
+               data-dojo-props='
+                   name: "role",
+                   required: true,
+                   maxLength: 64,
+                   trim: true,
+                   style: "width: 30em;"
+                   '
+      >
+        <option value="member">${i18n.form.roleMember}</option>
+        <option value="admin">${i18n.form.roleAdmin}</option>
+      </select>
+    </td>
+  </tr>
+  
+  <tr>
+    <td>&nbsp;</td>
+    <td>
+      <input
+          data-dojo-type="dijit.form.CheckBox" 
+          data-dojo-props='
+              name: "active",
+              checked: true
+              '
+      />
+      <label>${i18n.form.active}</label>
+    </td>
+  </tr>
+  
+  <tr>
+    <td>&nbsp;</td>
+    <td><hr></td>
+  </tr>
+  
+  <tr>
+    <td>&nbsp;</td>
+    <td>
+      <input
+          data-dojo-attach-point="changePasswordWidget"
+          data-dojo-type="dijit.form.CheckBox" 
+          data-dojo-props='
+              name: "changePassword",
+              checked: true,
+              disabled: true
+              '
+      />
+      <label>${i18n.form.changePassword}</label>
+    </td>
+  </tr>
+  
+  <tr>
+    <td>Password</td>
+    <td><input 
+            type="password"
+            data-dojo-attach-point="password1Widget"
+            data-dojo-type="dijit.form.ValidationTextBox"
+            data-dojo-props="
+                name: 'password1',
+                required: true,
+                style: 'width:30em;'
+            "
+            >
+    </td>
+  </tr>
+
+  <tr>
+    <td>Verify</td>
+    <td><input 
+            type="password"
+            data-dojo-attach-point="password2Widget"
+            data-dojo-type="dijit.form.ValidationTextBox"
+            data-dojo-props="
+                name: 'password2',
+                required: true,
+                style: 'width:30em;'
+            "
+            >
+    </td>
+  </tr>
+  
+</table>

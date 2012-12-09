@@ -1,0 +1,18 @@
+<div class="members-content">
+  <h2 class="invisible"><?php echo $this->translate('title.members') ?></h2>
+  <?php echo $this->partialLoop('helpers/member.phtml', $this->members) ?>
+  <div class="grid-clear"></div>
+</div>
+
+<script>
+//  dojo.ready(function() {
+//    
+//    dojo.query("div.member-container").forEach(function(node) {
+//      var animation = dojo.isWebKit ? 'flipInX' : 'bounceIn';
+//      dojo.addClass(node, animation);
+//      dojo.addClass(node, "animated");
+//      dojo.addClass(node, "delayed");
+//    });
+//    
+//  });
+</script>

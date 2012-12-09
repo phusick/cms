@@ -1,0 +1,35 @@
+.widgetSidebarItem {
+  height: 20px;
+  cursor: pointer;
+  padding-left: 12px;
+  overflow: hidden;
+  padding-top: 0px;  
+}
+
+.widgetSidebarItem .sidebarItemText {
+  font-weight: normal;
+  line-height: 20px;
+  color: #191919;
+  background-color: transparent;
+  margin-left: 5px;  
+}
+
+.widgetSidebarItem .sidebarItemIcon {
+  width: 16px;
+  height: 16px;
+}
+
+.widgetSidebarItemHover {
+  background: #E8EEF4;
+}
+
+.widgetSidebarItemChecked {
+  background: #226EBC url(images/sidebar-item-bg-checked.png) repeat-x; 
+  cursor: default;
+}
+
+.widgetSidebarItemChecked .sidebarItemText {
+  text-shadow: 1px 1px 1px #22568c;
+  font-weight: bold;
+  color: white;
+}

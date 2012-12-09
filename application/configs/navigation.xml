@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config>
+  
+  <navigation>
+    
+    <home>
+      <label>nav.home</label>
+      <module>default</module>
+      <controller>index</controller>
+      <action>index</action>
+      <route>default</route>
+      <class>nav-home</class>
+    </home>
+    
+    <posts>
+      <label>nav.posts</label>
+      <module>default</module>
+      <controller>posts</controller>
+      <action>index</action>  
+      <route>default</route>
+      <class>nav-posts</class>
+    </posts>
+    
+    <members>
+      <label>nav.members</label>
+      <module>default</module>
+      <controller>members</controller>
+      <action>index</action>
+      <route>default</route>
+      <class>nav-members</class>
+    </members>
+    
+    <documents>
+      <label>nav.documents</label>
+      <module>default</module>
+      <controller>docs</controller>
+      <action>index</action>
+      <route>folder</route>
+      <class>nav-docs</class>
+    </documents>
+    
+    <events>
+      <label>nav.events</label>
+      <module>default</module>
+      <controller>events</controller>
+      <action>index</action>
+      <route>default</route>
+      <class>nav-events</class>
+    </events>
+    
+    <admin>
+      <label>nav.admin</label>
+      <module>default</module>
+      <controller>admin</controller>
+      <action>index</action>
+      <route>default</route>
+      <resource>default:admin</resource>
+      <privilege>index</privilege>
+      <class>nav-admin</class>
+    </admin>
+    
+  </navigation>
+  
+</config>

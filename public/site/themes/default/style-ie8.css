@@ -1,0 +1,60 @@
+/* LOGIN FORM */ 
+form.login-form input[type=text],
+form.login-form input[type=password]
+{
+  line-height: 30px;
+}
+
+form.login-form input[type=password] {
+  font-family: Arial,sans-serif;
+}
+
+
+/* FILE-WIDGET */
+.file-widget {
+  width: 348px;
+}
+
+.file-widget .container {
+  border: none;
+  background: transparent url(images/docs-file-background.png) 0 0 repeat-y;
+}
+
+.file-widget .content {
+  background-color: #fff;
+}
+.file-widget .border-top,
+.file-widget .border-bottom {
+  display: block;
+  height: 8px;
+  background-color: transparent;
+  background-position: 0 0;
+  background-repeat: no-repeat;
+}
+
+.file-widget .border-top {
+  background-image: url(images/docs-file-border-top.png);
+}
+
+.file-widget .border-bottom {
+  background-image: url(images/docs-file-border-bottom.png);
+}
+
+.file-widget .content {
+  width: 340px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.file-widget {
+  margin-top: 1px;
+  margin-bottom: 4px;
+}
+
+.event-widget .details {
+  font-family: Helvetiva, Arial, sans-serif;
+}
+
+.member-content .info-basic .photo {
+  border: 1px solid #dddddd;
+}

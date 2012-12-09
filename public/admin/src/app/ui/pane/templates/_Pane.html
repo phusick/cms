@@ -1,0 +1,24 @@
+<div
+    data-dojo-type="dijit.layout.BorderContainer"
+    data-dojo-props="design: 'headline', gutters: false"
+    style="height:100%;"
+    >
+  
+  <div
+      data-dojo-type="dijit.layout.ContentPane"
+      data-dojo-props="region: 'top', splitter: false"
+  >
+    <!-- headline content -->
+    <div class="pane-caption ${iconClass}">${caption}</div>
+  </div>
+  
+  <div
+    data-dojo-type="dijit.layout.ContentPane"
+    data-dojo-props="region: 'center'"
+    style="padding:10px; padding-top:0;height:100%;"
+  >
+    <!-- main content -->
+    ${template}
+  </div>  
+ 
+</div>

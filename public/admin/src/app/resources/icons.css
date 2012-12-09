@@ -1,0 +1,214 @@
+/* ICON SIZES */
+.icon16 {
+  width: 16px;
+  height: 16px;
+  background-repeat: no-repeat;
+}
+
+.iconFlag {
+  width: 16px;
+  height: 11px;
+  background-repeat: no-repeat;
+}
+
+
+/* ICONS*/
+.sidebarIconPosts {
+  background-image: url(icons/sidebar-posts.png);
+}
+
+.sidebarIconPages {
+  background-image: url(icons/sidebar-pages.png);
+}
+
+.sidebarIconNews {
+  background-image: url(icons/sidebar-news.png);
+}
+
+.sidebarIconMembers {
+  background-image: url(icons/sidebar-members.png);
+}
+
+.sidebarIconDocs {
+  background-image: url(icons/sidebar-docs.png);
+}
+
+.sidebarIconEvents {
+  background-image: url(icons/sidebar-events.png);
+}
+
+.sidebarIconUsers {
+  background-image: url(icons/sidebar-users.png);
+}
+
+.sidebarIconSettings {
+  background-image: url(icons/sidebar-settings.png);
+}
+
+.sidebarIconLogs {
+  background-image: url(icons/sidebar-logs.png);
+}
+
+.paneIconPosts {
+  background-image: url(icons/pane-posts.png);
+}
+
+.paneIconPages {
+  background-image: url(icons/pane-pages.png);
+}
+
+.paneIconNews {
+  background-image: url(icons/pane-news.png);
+}
+
+.paneIconMembers {
+  background-image: url(icons/pane-members.png);
+}
+
+.paneIconDocs {
+  background-image: url(icons/pane-docs.png);
+}
+
+.paneIconEvents {
+  background-image: url(icons/pane-events.png);
+}
+
+.paneIconUsers {
+  background-image: url(icons/pane-users.png);
+}
+
+.paneIconSettings {
+  background-image: url(icons/pane-settings.png);
+}
+
+.paneIconLogs {
+  background-image: url(icons/pane-logs.png);
+}
+
+.localeIconHeader {
+  background-image: url(icons/locale-header.png);
+}
+
+.localeIcon-en {
+  background-image: url(icons/locale-en.png);
+}
+
+.localeIcon-cs {
+  background-image: url(icons/locale-cs.png);
+}
+
+.publishIconHeader {
+  background-image: url(icons/publish-header.png);
+}
+
+.publishIconTrue {
+  background-image: url(icons/publish-true.png);
+}
+
+.publishIconFalse {
+  background-image: url(icons/publish-false.png);
+}
+
+.attachmentIconHeader {
+  background-image: url(icons/paper-clip.png);
+}
+
+.activeUserIconHeader {
+  background-image: url(icons/user-share.png);
+}
+
+/*
+  APPLICATION MENU
+*/
+.menuIconGear {
+  background-image: url(icons/gear.png);
+}
+
+.menuIconLogout {
+  background-image: url(icons/control-power.png);
+}
+
+.menuIconVisitSite {
+  background-image: url(icons/application-browser.png);
+}
+
+.menuIconAbout {
+  background-image: url(icons/information.png);
+}
+
+/*
+  TOOLBARS
+*/
+
+
+.toolbarIconCreate {
+  background-image: url(icons/toolbar-create.png);
+}
+
+.dijitDisabled .toolbarIconCreate {
+  background-image: url(icons/toolbar-create-disabled.png);
+}
+
+.toolbarIconUpdate {
+  background-image: url(icons/toolbar-update.png);
+}
+
+.dijitDisabled .toolbarIconUpdate {
+  background-image: url(icons/toolbar-update-disabled.png);
+}
+
+.toolbarIconDelete {
+  background-image: url(icons/toolbar-delete.png);
+}
+
+.dijitDisabled .toolbarIconDelete {
+  background-image: url(icons/toolbar-delete-disabled.png);
+}
+
+.toolbarIconRefresh {
+  background-image: url(icons/toolbar-refresh.png);
+}
+
+/* FOLDER */
+
+.toolbarFolderIconCreate {
+  background-image: url(icons/toolbar-folder-create.png);
+}
+
+.toolbarFolderIconUpdate {
+  background-image: url(icons/toolbar-folder-update.png);
+}
+
+.dijitDisabled .toolbarFolderIconUpdate {
+  background-image: url(icons/toolbar-folder-update-disabled.png);
+}
+
+.toolbarFolderIconDelete {
+  background-image: url(icons/toolbar-folder-delete.png);
+}
+
+.dijitDisabled .toolbarFolderIconDelete {
+  background-image: url(icons/toolbar-folder-delete-disabled.png);
+}
+
+/* EVENT */
+
+.toolbarEventIconCreate {
+  background-image: url(icons/toolbar-event-create.png);
+}
+
+.toolbarEventIconUpdate {
+  background-image: url(icons/toolbar-event-update.png);
+}
+
+.dijitDisabled .toolbarEventIconUpdate {
+  background-image: url(icons/toolbar-event-update-disabled.png);
+}
+
+.toolbarEventIconDelete {
+  background-image: url(icons/toolbar-event-delete.png);
+}
+
+.dijitDisabled .toolbarEventIconDelete {
+  background-image: url(icons/toolbar-event-delete-disabled.png);
+}

@@ -1,0 +1,141 @@
+<div
+    data-dojo-type="dijit.layout.BorderContainer"
+    data-dojo-props="design: 'sidebar', gutters: false"
+    data-dojo-attach-point="mainContainer"
+    style="height:100%;"
+>
+  
+  <div
+      data-dojo-type="dijit.layout.BorderContainer"
+      data-dojo-props="region: 'left', design: 'headline', gutters: false, splitter: true"
+      data-dojo-attach-point="folderPane"
+      style="width:240px;"
+  >
+    <div
+      data-dojo-type="dijit.layout.ContentPane"
+      data-dojo-props="region: 'top'"
+    >
+      <!-- folder pane content -->
+      <div data-dojo-type="dijit.Toolbar">
+        <div
+          data-dojo-type="dijit.form.Button"
+          data-dojo-props="iconClass:'icon16 toolbarFolderIconCreate'"
+          data-dojo-attach-point="createFolderButton"
+          data-dojo-attach-event="onClick:_onFolderCreate"
+        >
+          ${i18n.toolbar.create}
+        </div>
+
+        <span data-dojo-type="dijit.ToolbarSeparator"></span>
+
+        <div
+          data-dojo-type="dijit.form.Button"
+          data-dojo-props="iconClass:'icon16 toolbarFolderIconUpdate', showLabel: false, disabled: true"
+          data-dojo-attach-point="updateFolderButton"
+          data-dojo-attach-event="onClick:_onFolderUpdate"
+        >
+          ${i18n.toolbar.update}
+        </div>
+
+        <div
+          data-dojo-type="dijit.form.Button"
+          data-dojo-props="iconClass:'icon16 toolbarFolderIconDelete', showLabel: false, disabled: true"
+          data-dojo-attach-point="deleteFolderButton"
+          data-dojo-attach-event="onClick:_onFolderDelete"
+        >
+          ${i18n.toolbar.delete_}
+        </div>
+
+        <span data-dojo-type="dijit.ToolbarSeparator"></span>
+
+        <div
+          data-dojo-type="dijit.form.Button"
+          data-dojo-props="iconClass:'icon16 toolbarIconRefresh', showLabel: false"
+          data-dojo-attach-point="refreshFolderButton"
+          data-dojo-attach-event="onClick:_onFolderRefresh"
+        >
+          ${i18n.toolbar.refresh}
+        </div>
+      </div>
+    </div>
+    
+    <div
+      data-dojo-type="dijit.layout.ContentPane"
+      data-dojo-props="region: 'center'"
+    >
+      <div 
+          data-dojo-attach-point="folderGridNode"
+          class="gridPlaceholder"
+      ></div>
+    </div>
+    
+  </div>
+  
+  <div
+    data-dojo-type="dijit.layout.BorderContainer"
+    data-dojo-props="region: 'center', design: 'headline', gutters: false"
+    data-dojo-attach-point="filePane"
+  >
+    
+    <div
+      data-dojo-type="dijit.layout.ContentPane"
+      data-dojo-props="region: 'top'"
+    >
+      <!-- file pane content -->
+      <div data-dojo-type="dijit.Toolbar">
+
+        <div
+          data-dojo-type="dijit.form.Button"
+          data-dojo-props="iconClass:'icon16 toolbarIconCreate', disabled: true"
+          data-dojo-attach-point="createFileButton"
+          data-dojo-attach-event="onClick:_onFileCreate"
+        >
+          ${i18n.toolbar.create}
+        </div>
+
+        <span data-dojo-type="dijit.ToolbarSeparator"></span>
+
+        <div
+          data-dojo-type="dijit.form.Button"
+          data-dojo-props="iconClass:'icon16 toolbarIconUpdate', disabled: true"
+          data-dojo-attach-point="updateFileButton"
+          data-dojo-attach-event="onClick:_onFileUpdate"
+        >
+          ${i18n.toolbar.update}
+        </div>
+
+        <div
+          data-dojo-type="dijit.form.Button"
+          data-dojo-props="iconClass:'icon16 toolbarIconDelete', disabled: true"
+          data-dojo-attach-point="deleteFileButton"
+          data-dojo-attach-event="onClick:_onFileDelete"
+        >
+          ${i18n.toolbar.delete_}
+        </div>
+
+        <span data-dojo-type="dijit.ToolbarSeparator"></span>
+
+        <div
+          data-dojo-type="dijit.form.Button"
+          data-dojo-props="iconClass:'icon16 toolbarIconRefresh'"
+          data-dojo-attach-point="refreshFileButton"
+          data-dojo-attach-event="onClick:_onFileRefresh"
+        >
+          ${i18n.toolbar.refresh}
+        </div>
+      </div>
+    </div>
+    
+    <div
+      data-dojo-type="dijit.layout.ContentPane"
+      data-dojo-props="region: 'center'"
+    >
+      <div 
+          data-dojo-attach-point="fileGridNode"
+          class="gridPlaceholder"
+      ></div>
+    </div>
+    
+  </div>     
+  
+</div>
