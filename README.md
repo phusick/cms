@@ -13,6 +13,8 @@ Implemented as Zend Framework module following the MVC paradigm generating seman
 
 ## Administration Console
 
+The Source Code Path: [`/public/admin/src/app`](https://github.com/phusick/cms/tree/master/public/admin/src/app)
+
 A single page JavaScript application written in [Dōjō Toolkit](http://dojotoolkit.org/) and [dgrid](http://dgrid.io) serving as a user interface to manipulate model data via RESTful API:
 
 - Object-oriented JavaScript managed with [Asynchronous Module Definition API](http://requirejs.org/).
