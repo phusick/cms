@@ -91,7 +91,7 @@ return declare("app.ui._Dialog", Dialog, {
   },
   
   _onSubmit: function() {
-    // cannot call onExecute, because I cannot disconnect it from clossing dialog
+    // cannot call onExecute, because I cannot disconnect it from closing the dialog
     // this.onExecute(); 
     this.execute(this.form.serialize());
   },
@@ -102,7 +102,7 @@ return declare("app.ui._Dialog", Dialog, {
   
   execute: function(data) {
     var options = {};
-    if (null != this.identity) {
+    if (null !== this.identity) {
       data.id = this.identity;
       options.id = this.identity;
     }

@@ -23,7 +23,7 @@ function(
 return declare(_Dialog, {
   
   constructor: function(props) {
-    var action = this.identity == null ? i18n.action.create : i18n.action.update;
+    var action = this.identity === null ? i18n.action.create : i18n.action.update;
     this.title = action + ": " + i18n.item.event;
     this.form = new Form(props);
   }
