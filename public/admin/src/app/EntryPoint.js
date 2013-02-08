@@ -37,13 +37,13 @@ define([
   
 ],
   function(
-      declare, 
+      declare,
       lang,
       array,
       query,
       aspect,
-      _WidgetBase, 
-      _TemplatedMixin, 
+      _WidgetBase,
+      _TemplatedMixin,
       _WidgetsInTemplateMixin,
       registry,
       
@@ -70,7 +70,7 @@ define([
       templateString: template,
       i18n: i18n,
       
-      constructor: function() {     
+      constructor: function() {
         this.paneIds = ["posts", "pages", "news", "members", "docs", "events",
             "users", "settings", "logs"];
         array.forEach(this.paneIds, function(id) {
@@ -78,7 +78,7 @@ define([
         }, this);
       },
       
-      postCreate: function() {  
+      postCreate: function() {
         this.initComponents();
         this.initConnections();
       this.selectPane("docs");
@@ -86,16 +86,15 @@ define([
       
       initComponents: function() {
         var self = this;
-        query("div[data-dojo-widget-type=SidebarItem]", 
+        query("div[data-dojo-widget-type=SidebarItem]",
             this.sidebarPane.domNode).forEach(
           function(domNode) {
             var widget = registry.getEnclosingWidget(domNode);
-            var id = widget.id;
-            id = id.substring(id.lastIndexOf("-") + 1);
-            self[id + "Item"] = widget;
+            var pane = widget.pane;
+            self[pane + "Item"] = widget;
             
-            aspect.after(widget, "onClick", 
-                lang.hitch(self, "sidebarItem_onClick", id), true);
+            aspect.after(widget, "onClick",
+                lang.hitch(self, "sidebarItem_onClick", pane), true);
           }
         );
           
@@ -122,7 +121,7 @@ define([
       
       getPane: function(id) {
         var name = this.getPaneName(id);
-        if(null == this[name]) {
+        if(null === this[name]) {
           this[name] = this.createPane(id);
           this[name].startup();
           this.stackContainer.addChild(this[name]);
@@ -169,14 +168,14 @@ define([
       },
       
       sidebarItem_onClick: function(id) {
-        this.selectPane(id); 
+        this.selectPane(id);
       },
       
       logout: function() {
         window.location = "/auth/logout";
       }
       
-    })
+    });
   }
 );
 

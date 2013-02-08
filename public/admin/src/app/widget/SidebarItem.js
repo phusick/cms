@@ -7,7 +7,8 @@ define([
   "dijit/form/_FormWidget",
   "dijit/registry",
   
-  "dojo/text!./SidebarItem/SidebarItem.html"
+  "dojo/text!./SidebarItem/SidebarItem.html",
+  "dojo/NodeList-traverse"
 ],
   function(
     declare,
@@ -47,7 +48,8 @@ define([
           if(!this._created) {return;}
           if(value) {
             var _this = this;
-            query("div[data-dojo-widget-type=SidebarItem]").forEach(
+            var parentNode = query(this.domNode).parent()[0];
+            query("div[data-dojo-widget-type=SidebarItem]", parentNode).forEach(
               function(inputNode) {
                 var name = domAttr.get(inputNode, "data-dojo-widget-name");
                 if(name == _this.name && inputNode != _this.focusNode) {
